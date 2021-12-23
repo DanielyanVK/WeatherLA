@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Overpass-Regular.ttf">
+            <string>Overpass-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WeatherViewController" customModule="WeatherLA" customModuleProvider="target">
+            <connections>
+                <outlet property="conditionImageView" destination="O5V-dL-ITf" id="SHQ-bt-kka"/>
+                <outlet property="conditionLabel" destination="rXx-xB-kaJ" id="RxU-c6-OQA"/>
+                <outlet property="dateLabel" destination="3hy-Hh-fO3" id="ifQ-T6-Pg2"/>
+                <outlet property="humidityLabel" destination="jz0-p2-KpN" id="rUU-Hl-eA4"/>
+                <outlet property="locationLabel" destination="a2G-ok-1D2" id="7hx-l8-1og"/>
+                <outlet property="temperatureLabel" destination="fB8-BA-fdB" id="g1i-It-Cmq"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="windSpeedLabel" destination="wsQ-oX-FkV" id="ZDp-3Y-MRe"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Rj9-dg-Z4T">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2G-ok-1D2">
+                    <rect key="frame" x="81" y="54" width="86" height="30.5"/>
+                    <fontDescription key="fontDescription" name="Overpass-Regular" family="Overpass" pointSize="24"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bell" translatesAutoresizingMaskIntoConstraints="NO" id="TEb-iF-r33">
+                    <rect key="frame" x="357" y="60.5" width="24" height="24"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="locationIco" translatesAutoresizingMaskIntoConstraints="NO" id="hda-z7-lzH">
+                    <rect key="frame" x="32" y="60.5" width="24" height="24"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Square" translatesAutoresizingMaskIntoConstraints="NO" id="LPX-G0-U76">
+                    <rect key="frame" x="25.5" y="363" width="363" height="345"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="363" id="Bfu-Uf-ASV"/>
+                        <constraint firstAttribute="height" constant="345" id="qlT-Kf-UzD"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hy-Hh-fO3">
+                    <rect key="frame" x="0.0" y="381" width="414" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="19k-Mr-2dQ"/>
+                        <constraint firstAttribute="height" constant="25" id="awd-9z-gZ1"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Overpass-Regular" family="Overpass" pointSize="19"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fB8-BA-fdB">
+                    <rect key="frame" x="146.5" y="428" width="121" height="102"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="121" id="2Jg-kW-Njb"/>
+                        <constraint firstAttribute="height" constant="102" id="5EU-F5-Kf5"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Overpass-Regular" family="Overpass" pointSize="100"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="humValue" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jz0-p2-KpN">
+                    <rect key="frame" x="229.5" y="651" width="79" height="23"/>
+                    <fontDescription key="fontDescription" name="Overpass-Regular" family="Overpass" pointSize="18"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clear-day" translatesAutoresizingMaskIntoConstraints="NO" id="O5V-dL-ITf">
+                    <rect key="frame" x="112" y="150" width="190" height="160"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="160" id="Rgj-gP-Lj1"/>
+                        <constraint firstAttribute="width" constant="190" id="xkP-r4-tbH"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wind" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKf-2b-pZg">
+                    <rect key="frame" x="130.5" y="607" width="67" height="23"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="67" id="4PF-R0-rhx"/>
+                        <constraint firstAttribute="height" constant="23" id="u51-b6-iTH"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Overpass-Regular" family="Overpass" pointSize="18"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Wind" translatesAutoresizingMaskIntoConstraints="NO" id="v6c-Wy-QtL">
+                    <rect key="frame" x="101.5" y="607" width="10" height="20"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Humidity" translatesAutoresizingMaskIntoConstraints="NO" id="lFQ-pl-6Kp">
+                    <rect key="frame" x="101.5" y="651" width="10" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="6Fv-4m-MXj"/>
+                        <constraint firstAttribute="width" constant="10" id="epL-ZI-I0x"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="windValue" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wsQ-oX-FkV">
+                    <rect key="frame" x="229.5" y="607" width="82.5" height="23"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="23" id="XXK-lx-P9i"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Overpass-Regular" family="Overpass" pointSize="18"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Hum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TW6-CK-0Rq">
+                    <rect key="frame" x="132" y="651" width="67" height="23"/>
+                    <fontDescription key="fontDescription" name="Overpass-Regular" family="Overpass" pointSize="18"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Condition" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rXx-xB-kaJ">
+                    <rect key="frame" x="0.0" y="538" width="414" height="29.5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="29.670000000000002" id="ebk-20-OjW"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Overpass-Regular" family="Overpass" pointSize="23"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="°" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ai5-Kn-R0s">
+                    <rect key="frame" x="269" y="423.5" width="21" height="63.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="21" id="9DY-ov-FLW"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Overpass-Regular" family="Overpass" pointSize="50"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="separator" translatesAutoresizingMaskIntoConstraints="NO" id="n88-q6-gCt">
+                    <rect key="frame" x="204.5" y="607" width="5" height="24"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="separator" translatesAutoresizingMaskIntoConstraints="NO" id="o7w-s7-jbc">
+                    <rect key="frame" x="204.5" y="651" width="5" height="21"/>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <constraints>
+                <constraint firstItem="a2G-ok-1D2" firstAttribute="leading" secondItem="hda-z7-lzH" secondAttribute="trailing" constant="25" id="1Ns-jh-jKw"/>
+                <constraint firstAttribute="trailing" secondItem="Rj9-dg-Z4T" secondAttribute="trailing" id="1Oi-bC-mO0"/>
+                <constraint firstItem="lFQ-pl-6Kp" firstAttribute="top" secondItem="v6c-Wy-QtL" secondAttribute="bottom" constant="24" id="28S-pe-CwV"/>
+                <constraint firstItem="lFQ-pl-6Kp" firstAttribute="leading" secondItem="LPX-G0-U76" secondAttribute="leading" constant="76" id="6id-1E-htb"/>
+                <constraint firstItem="rXx-xB-kaJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="76g-52-usg"/>
+                <constraint firstItem="o7w-s7-jbc" firstAttribute="top" secondItem="n88-q6-gCt" secondAttribute="bottom" constant="20" id="Ac3-GW-6VN"/>
+                <constraint firstItem="hKf-2b-pZg" firstAttribute="leading" secondItem="v6c-Wy-QtL" secondAttribute="trailing" constant="19" id="CvL-91-WfI"/>
+                <constraint firstItem="o7w-s7-jbc" firstAttribute="top" secondItem="lFQ-pl-6Kp" secondAttribute="top" id="ETR-QM-BCV"/>
+                <constraint firstItem="rXx-xB-kaJ" firstAttribute="centerX" secondItem="O5V-dL-ITf" secondAttribute="centerX" id="Ege-nn-1ye"/>
+                <constraint firstItem="fB8-BA-fdB" firstAttribute="top" secondItem="3hy-Hh-fO3" secondAttribute="bottom" constant="22" id="FBD-yj-u3t"/>
+                <constraint firstAttribute="trailing" secondItem="rXx-xB-kaJ" secondAttribute="trailing" id="Fil-Gc-4sy"/>
+                <constraint firstItem="TEb-iF-r33" firstAttribute="width" secondItem="hda-z7-lzH" secondAttribute="width" id="HQa-3g-FBf"/>
+                <constraint firstAttribute="trailing" secondItem="3hy-Hh-fO3" secondAttribute="trailing" id="IZf-if-u09"/>
+                <constraint firstAttribute="bottom" secondItem="Rj9-dg-Z4T" secondAttribute="bottom" id="Jqf-Y2-Fca"/>
+                <constraint firstItem="Ai5-Kn-R0s" firstAttribute="leading" secondItem="fB8-BA-fdB" secondAttribute="trailing" constant="1.5" id="Kk6-3O-8mk"/>
+                <constraint firstItem="hda-z7-lzH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="Kph-9F-IXX"/>
+                <constraint firstItem="TW6-CK-0Rq" firstAttribute="top" secondItem="lFQ-pl-6Kp" secondAttribute="top" id="Mtl-SV-TSx"/>
+                <constraint firstItem="jz0-p2-KpN" firstAttribute="top" secondItem="TW6-CK-0Rq" secondAttribute="top" id="N28-8G-Pwa"/>
+                <constraint firstItem="n88-q6-gCt" firstAttribute="top" secondItem="hKf-2b-pZg" secondAttribute="top" id="Ods-Nc-vPQ"/>
+                <constraint firstItem="LPX-G0-U76" firstAttribute="top" secondItem="O5V-dL-ITf" secondAttribute="bottom" constant="53" id="Ox6-tg-tEg"/>
+                <constraint firstItem="fB8-BA-fdB" firstAttribute="centerX" secondItem="O5V-dL-ITf" secondAttribute="centerX" id="PDj-no-IQ3"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="TEb-iF-r33" secondAttribute="trailing" constant="33" id="PZC-qz-SMA"/>
+                <constraint firstItem="lFQ-pl-6Kp" firstAttribute="leading" secondItem="v6c-Wy-QtL" secondAttribute="leading" id="U1P-hM-RBO"/>
+                <constraint firstItem="jz0-p2-KpN" firstAttribute="top" secondItem="lFQ-pl-6Kp" secondAttribute="top" id="WWv-VV-JSm"/>
+                <constraint firstItem="rXx-xB-kaJ" firstAttribute="top" secondItem="fB8-BA-fdB" secondAttribute="bottom" constant="8" id="Wiv-fI-dDn"/>
+                <constraint firstItem="3hy-Hh-fO3" firstAttribute="centerX" secondItem="O5V-dL-ITf" secondAttribute="centerX" id="X1v-eC-Av0"/>
+                <constraint firstItem="o7w-s7-jbc" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="auT-Nv-2nm"/>
+                <constraint firstItem="TW6-CK-0Rq" firstAttribute="top" secondItem="hKf-2b-pZg" secondAttribute="bottom" constant="21" id="cLQ-1F-Gmk"/>
+                <constraint firstItem="3hy-Hh-fO3" firstAttribute="top" secondItem="O5V-dL-ITf" secondAttribute="bottom" constant="71" id="cSS-F4-cba"/>
+                <constraint firstItem="TEb-iF-r33" firstAttribute="bottom" secondItem="a2G-ok-1D2" secondAttribute="bottom" id="cmU-Vp-ktR"/>
+                <constraint firstItem="o7w-s7-jbc" firstAttribute="top" secondItem="TW6-CK-0Rq" secondAttribute="top" id="dI5-Nh-RJa"/>
+                <constraint firstItem="3hy-Hh-fO3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="eBs-eR-EYp"/>
+                <constraint firstItem="LPX-G0-U76" firstAttribute="centerX" secondItem="O5V-dL-ITf" secondAttribute="centerX" id="fRD-xY-hsk"/>
+                <constraint firstItem="jz0-p2-KpN" firstAttribute="top" secondItem="wsQ-oX-FkV" secondAttribute="bottom" constant="21" id="fcA-45-82m"/>
+                <constraint firstItem="O5V-dL-ITf" firstAttribute="top" secondItem="a2G-ok-1D2" secondAttribute="bottom" constant="65.329999999999998" id="hCZ-TE-2kt"/>
+                <constraint firstItem="n88-q6-gCt" firstAttribute="top" secondItem="rXx-xB-kaJ" secondAttribute="bottom" constant="39.5" id="hoW-qG-gqR"/>
+                <constraint firstItem="a2G-ok-1D2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="54" id="juf-Lu-Efc"/>
+                <constraint firstItem="a2G-ok-1D2" firstAttribute="bottom" secondItem="hda-z7-lzH" secondAttribute="bottom" id="kFS-ur-AhM"/>
+                <constraint firstItem="TEb-iF-r33" firstAttribute="height" secondItem="hda-z7-lzH" secondAttribute="height" id="kYB-jf-6wQ"/>
+                <constraint firstItem="n88-q6-gCt" firstAttribute="leading" secondItem="hKf-2b-pZg" secondAttribute="trailing" constant="7" id="lze-YF-K5c"/>
+                <constraint firstItem="hKf-2b-pZg" firstAttribute="top" secondItem="v6c-Wy-QtL" secondAttribute="top" id="mNL-KU-afs"/>
+                <constraint firstItem="TEb-iF-r33" firstAttribute="top" secondItem="hda-z7-lzH" secondAttribute="top" id="o3W-XQ-Ubj"/>
+                <constraint firstItem="rXx-xB-kaJ" firstAttribute="top" secondItem="Ai5-Kn-R0s" secondAttribute="bottom" constant="51" id="oDp-Ek-peJ"/>
+                <constraint firstItem="TW6-CK-0Rq" firstAttribute="leading" secondItem="lFQ-pl-6Kp" secondAttribute="trailing" constant="20.5" id="oK5-cy-WzX"/>
+                <constraint firstItem="Rj9-dg-Z4T" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="oks-ne-flj"/>
+                <constraint firstItem="wsQ-oX-FkV" firstAttribute="height" secondItem="hKf-2b-pZg" secondAttribute="height" id="ol8-8I-LNG"/>
+                <constraint firstItem="O5V-dL-ITf" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="p5G-0J-df1"/>
+                <constraint firstItem="wsQ-oX-FkV" firstAttribute="top" secondItem="v6c-Wy-QtL" secondAttribute="top" id="qg7-Mr-W9C"/>
+                <constraint firstItem="n88-q6-gCt" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="rjp-zu-fBk"/>
+                <constraint firstItem="o7w-s7-jbc" firstAttribute="leading" secondItem="TW6-CK-0Rq" secondAttribute="trailing" constant="5.5" id="tVS-bd-Tj5"/>
+                <constraint firstItem="wsQ-oX-FkV" firstAttribute="leading" secondItem="n88-q6-gCt" secondAttribute="trailing" constant="20" id="uue-fr-Hnk"/>
+                <constraint firstItem="Rj9-dg-Z4T" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="yIk-CX-D7F"/>
+                <constraint firstItem="jz0-p2-KpN" firstAttribute="leading" secondItem="wsQ-oX-FkV" secondAttribute="leading" id="yLz-9o-eVd"/>
+                <constraint firstItem="wsQ-oX-FkV" firstAttribute="top" secondItem="hKf-2b-pZg" secondAttribute="top" id="zhD-ZY-VzN"/>
+            </constraints>
+            <point key="canvasLocation" x="136.23188405797103" y="113.16964285714285"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Humidity" width="18" height="22"/>
+        <image name="Square" width="363" height="345"/>
+        <image name="Wind" width="20" height="20"/>
+        <image name="background" width="56" height="56"/>
+        <image name="bell" width="18" height="22"/>
+        <image name="clear-day" width="240" height="240"/>
+        <image name="locationIco" width="24" height="24"/>
+        <image name="separator" width="5" height="21"/>
+    </resources>
+</document>
